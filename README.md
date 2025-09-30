@@ -28,6 +28,9 @@ Analyzes commits on the current branch and creates a pull request with an AI-gen
 ### `/sanity-check`
 Analyzes uncommitted changes to identify potential security issues, logic errors, code quality problems, and best practice violations.
 
+### `/push`
+Pushes the current branch to origin using `git push origin HEAD`.
+
 ## Usage
 
 Once installed, these commands are available in any project when using Claude Code:
@@ -37,6 +40,7 @@ Once installed, these commands are available in any project when using Claude Co
 claude commit
 claude pr
 claude sanity-check
+claude push
 ```
 
 ## Requirements
