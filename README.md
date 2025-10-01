@@ -23,7 +23,10 @@ git clone <repo-url> ~/.claude
 Stages all files and creates a commit with an AI-generated message based on the changes.
 
 ### `/pr`
-Analyzes commits on the current branch and creates a pull request with an AI-generated description. Supports GitHub PR templates.
+Analyzes commits on the current branch and creates a pull request with an AI-generated description. **Requires a PR template** - the command will fail if no template is found in the repository.
+
+### `/pr-comments`
+Fetches GitHub pull request comments, converts them into actionable code implementations, and creates an interactive workflow to apply reviewer suggestions with generated code changes.
 
 ### `/sanity-check`
 Analyzes uncommitted changes to identify potential security issues, logic errors, code quality problems, and best practice violations.
@@ -39,6 +42,7 @@ Once installed, these commands are available in any project when using Claude Co
 # In any git repository
 claude commit
 claude pr
+claude pr-comments [PR_NUMBER]
 claude sanity-check
 claude push
 ```
@@ -47,7 +51,7 @@ claude push
 
 - Claude Code CLI installed and configured
 - Git installed and configured
-- For `/pr` command: GitHub CLI (`gh`) installed and authenticated
+- For `/pr` and `/pr-comments` commands: GitHub CLI (`gh`) installed and authenticated
 
 ## Command Documentation
 
